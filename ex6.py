@@ -12,7 +12,8 @@ print(f"I said: {x}")
 print(f"I also said: '{y}'")
 
 hilarious = False
-joke_evaluation = "Isn't that joke so funny?! {}"
+joke_evaluation = "Isn't that joke so funny?! {}" # {} keeps the space for variable
+# that can be called by .format
 
 print(joke_evaluation.format(hilarious))
 # for my own interest
@@ -22,4 +23,4 @@ print(f"{joke_evaluation}".format(hilarious))
 w = "This is the left side of..."
 e = "a string with a right side."
 
-print(w+e)
+print(w+e) # it will add the strings without any space
