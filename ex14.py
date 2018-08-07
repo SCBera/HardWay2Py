@@ -12,7 +12,8 @@ print(f"Where do you live {user_name}?")
 lives = input(prompt)
 
 print("What kind of computer do you have?")
-computer = input(prompt)
+#computer = input(prompt)
+computer = input('> ')
 
 print(f"""
 Alright, so you said {likes} about liking me.
