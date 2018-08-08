@@ -12,7 +12,7 @@ print(f"Opening the file...{filename}")
 target = open(filename, 'w') # 'w' opens the file for writing
 
 print("Truncating the file. Goodbye!")
-#target.truncate() # Deletes everything from the file
+#target.truncate() # Deletes everything from the file, same does in 'w' mode.
 
 print("Now I'm going to ask you for three lines.")
 
