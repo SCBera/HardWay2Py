@@ -9,7 +9,7 @@ print("If you do want that, hit RETURN.")
 input("?")
 
 print(f"Opening the file...{filename}")
-target = open(filename, 'a') # opens the file for writing
+target = open(filename, 'w') # 'w' opens the file for writing
 
 print("Truncating the file. Goodbye!")
 #target.truncate() # Deletes everything from the file
