@@ -1,0 +1,17 @@
+# List of scripts.
+print("")
+print(f"...{variable}")
+print("...{variable}".format(variable))
+input("string")
+variable = input("")
+open(filename, 'r/w/a/r+')
+filedata = filename.read()
+len(filedata)
+filedata.truncate()
+filename.write()
+from sys import argv
+varibale1, varible2 = argv
+from os.path import exists
+def function():
+filedata.readline(line no.)
+filedata.seek(line no.)
