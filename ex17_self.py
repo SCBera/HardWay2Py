@@ -1,15 +1,17 @@
 from sys import argv
 from os.path import exists
 
-scipt, in_file, out_file = argv
+scipt, from_file, to_file = argv
 
-indata = (open(in_file)).read() #defaut open mode is read or 'r'
+in_file = open(from_file) #default open mode is read or 'r'
+indata = in_file.read() 
 
-print(f"Exists out_file? {exists(out_file)}.\nInput file {len(indata)} bytes long.")
+print(f"Exists out_file? {exists(to_file)}.\nInput file {len(indata)} bytes long.")
 
-(open(out_file, 'w')).write(indata)
+new_file = open(to_file, 'w')
+new_file.write(indata)
 
-#in_file.close() # close() not working in this way.
-#out_file.close()
+in_file.close()
+new_file.close()
 
 print("All done.")
