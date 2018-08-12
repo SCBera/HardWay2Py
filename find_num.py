@@ -1,25 +1,12 @@
-#from sys import exit
-choice = input("> ")
-user_input = ["all", "All", "everything", "Everything"]
-for string in user_input:
-    print(string)
-    break
-    if choice == string:
-        print("You greedy bastard!")
-        #break
+import re
+
+s = input("> ")
+m = re.match(r"([a-zA-Z]+)([0-9]+)",s) or re.match(r"([0-9]+)([a-zA-Z]+)",s) # not working with operator sign e.g., +/-/* etc.
+print(m.group(0))
+print(m.group(1))
+print(m.group(2))
 
 
-#for num in range(0, 10):
-#    print(num, choice)
-#    if choice == string in user_input:
-#        print(choice)
-#    elif str(num) in choice:
-#        how_much = int(choice)
-#        print("found!", how_much)
-#        #exit(0) # exception error!
-#        break
-#    elif str(num) not in choice and num < 9:
-#        print("will cont..")
-    else:
-        continue
-print("Man, learn to type a good number.")
+strings = [input("> ")]
+#strings = ['foofo21', 'bar432', 'foobar12345']
+[re.findall(r'(\w+?)(\d+)', s)[0] for s in strings]
