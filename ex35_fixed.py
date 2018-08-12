@@ -1,20 +1,22 @@
 from sys import exit
 
 def gold_room():
-    print("This room is full of gold. How much do you take?")
-
-    choice = input("> ")
-    try:
-        how_much = int(choice) # only work for number input
-    except:
-        dead("Man, learn to type a number only.")
-
-    if how_much < 50:
-        print("Nice, you're not greedy, you win!")
-        exit(0)
-    else:
-        dead("You greedy bastard!")
-
+	print("This room is full of gold. How much do you take?")
+	
+	choice = input("> ")
+	
+	if choice in ["all", "All", "Everything", "everything"]:
+		dead("You are greedy bastard!")
+	else:
+		try:
+			how_much = float(choice) # only work for number input
+			if how_much < 50.0:
+				print("Nice, you're not greedy, you win!")
+				exit(0)
+			else:
+				dead("You greedy bastard!")
+		except:
+			dead("Man, learn to type properly.")
 
 def bear_room():
     print("There is a bear here.")
@@ -24,7 +26,7 @@ def bear_room():
     bear_moved = False
 
     while True:
-        choice = input("(take honey/taunt bear/others)> ")
+        choice = input("(take honey/taunt bear/...)> ")
 
         if choice == "take honey":
             dead("The bear looks at you then slaps your face off.")
@@ -42,9 +44,9 @@ def bear_room():
 def cthulhu_room():
     print("Here you see the great evil Cthulhu.")
     print("He, it, whatever stares at you and you go insane.")
-    print("Do you flee for your life or eat your head?")
+    print("Do you 'flee' for your life or eat your 'head'?")
 
-    choice = input("(flee/head/others)> ")
+    choice = input("> ")
 
     if "flee" in choice:
         print("You can't flee from Cthulhu's room")
@@ -63,7 +65,7 @@ def start():
     print("There is a door to your right and left.")
     print("Which one do you take?")
 
-    choice = input("(right/left/other?)>")
+    choice = input("(right/left/..?)>")
 
     if choice == "left":
         bear_room()
