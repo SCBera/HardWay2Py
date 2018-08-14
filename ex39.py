@@ -41,6 +41,8 @@ for state, abbrev in list(states.items()):
 print('_' * 10)
 # safely get a abbreviation by state that might not be there
 state = states.get('Texas')
+if not state:
+    print("Sorry, no Texas.")
 
 # get a city with a default value
 city = cities.get('TX', 'Does Not Exist')
