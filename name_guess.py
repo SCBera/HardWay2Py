@@ -1,6 +1,7 @@
 import random
 
-names = ["Subhas", "Banka", "Nibedita", "Reynna"]
+names = ["Subhas", "Banka", "Nibedita", "Reynna", "Timir", "Subhro",
+         "Shamasree", "Suvendu", "Bidisa", "Anvita", "Atharav", "Rishab", "Nikita", "Tanay"]
 
 name = random.choice(names)
 
